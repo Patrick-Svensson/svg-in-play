@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>svg-in-play</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
-<body>
-    
+<body class="page">
+    <div class="emoji-container emoji-container--eyes-open">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="emoji" cx="100" cy="100" r="100"/>
+            <circle class="emoji__eye" cx="62" cy="65" r="18"/>
+            <circle class="emoji__eye" cx="138" cy="65" r="18"/>
+            <polyline class="emoji__mouth" points="50,140 150,140"/>
+        </svg>
+    </div>
+    <div class=" emoji-container emoji-container--eyes-shut">
+        <svg>
+            <use xlink:href="images/emoji.svg#emoji"></use>
+        </svg>
+    </div>
 </body>
 </html>

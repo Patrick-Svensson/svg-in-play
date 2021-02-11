@@ -1,0 +1,55 @@
+/* ------ Generic ------ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --background: #353f50;
+    --smiley: #fbd971;
+    --eyes-open: #af8066;
+    --eyes-shut: #f29c1f;
+    --mouth: #f0c419;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji-container {
+    width: 80vw;
+    height: 200px;
+}
+
+.emoji-container--eyes-open {
+    /* display: none; */
+}
+
+.emoji-container--eyes-shut {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.emoji{
+    fill: var(--smiley);
+}
+
+.emoji__eye {
+    fill: var(--eyes-open);
+}
+
+.emoji__mouth {
+    stroke: var(--mouth);
+    stroke-width: 12px;
+    stroke-linecap: round;
+}

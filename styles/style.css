@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap');
+
 /* ------ Generic ------ */
 
 *,
@@ -20,6 +21,8 @@
     --box-shadow: rgba(0, 0, 0, .5);
 }
 
+/* ------ Playground ------ */
+
 .page {
     width: 100vw;
     height: 100vh;
@@ -38,16 +41,20 @@
     flex-wrap: wrap;
 }
 
+.foundation {
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--foundation);
+}
+
+/* ------ Emojis ------ */
+
 .emoji__container {
     height: 200px;
     width: 200px;
     display: flex;
     margin-left: 15px;
-}
-
- .emoji--slide {
-    animation:
-    slide 2s ease-out .5s forwards;
 }
 
 .emoji{
@@ -64,6 +71,35 @@
     stroke-linecap: round;
 }
 
+/* ------ Button ------ */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 190px;
+    background-color: var(--box);
+    border-radius: 30px;
+    -moz-box-shadow:    5px 5px 10px var(--box-shadow);
+    -webkit-box-shadow: 5px 5px 10px var(--box-shadow);
+    box-shadow:         5px 5px 10px var(--box-shadow);
+    margin-bottom: 10px;
+    transition: height .5s ease-in;
+    outline: none;
+    font-family: 'Gaegu', sans serif;
+    color: var(--foundation);
+    font-weight: 700;
+    font-size: 46px;
+}
+
+/* ------ Animaitions ------ */
+
+.emoji--slide {
+    animation:
+    slide 2s ease-out 1.5s forwards;
+}
+
 @keyframes slide {
     from {
         transform: translateX(0);
@@ -74,27 +110,8 @@
     }
 }
 
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 200px;
-    background-color: var(--box);
-    border-radius: 30px;
-    -moz-box-shadow:    5px 5px 10px var(--box-shadow);
-    -webkit-box-shadow: 5px 5px 10px var(--box-shadow);
-    box-shadow:         5px 5px 10px var(--box-shadow);
-    margin-bottom: 10px;
-}
-
-.box__button {
-    
-}
-
-.foundation {
-    bottom: 0;
-    width: 100%;
-    height: 5px;
-    background-color: var(--foundation);
+.button:active {
+    height: 60px;
+    align-self: flex-end;
+    border: none;   
 }

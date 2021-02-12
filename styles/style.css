@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap');
 /* ------ Generic ------ */
 
 *,
@@ -14,6 +15,9 @@
     --eyes-open: #af8066;
     --eyes-shut: #f29c1f;
     --mouth: #f0c419;
+    --foundation: #dbd9d9;
+    --box: #b880b8;
+    --box-shadow: rgba(0, 0, 0, .5);
 }
 
 .page {
@@ -23,21 +27,27 @@
     background-color: var(--background);
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.emoji-container {
-    width: 80vw;
+.container {
+    width: 100vw;
     height: 200px;
-}
-
-.emoji-container--eyes-open {
-    /* display: none; */
-}
-
-.emoji-container--eyes-shut {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.emoji__container {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    margin-left: 15px;
+}
+
+ .emoji--slide {
+    animation:
+    slide 2s ease-out .5s forwards;
 }
 
 .emoji{
@@ -52,4 +62,39 @@
     stroke: var(--mouth);
     stroke-width: 12px;
     stroke-linecap: round;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX(200px);
+    }
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background-color: var(--box);
+    border-radius: 30px;
+    -moz-box-shadow:    5px 5px 10px var(--box-shadow);
+    -webkit-box-shadow: 5px 5px 10px var(--box-shadow);
+    box-shadow:         5px 5px 10px var(--box-shadow);
+    margin-bottom: 10px;
+}
+
+.box__button {
+    
+}
+
+.foundation {
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--foundation);
 }
